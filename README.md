@@ -1,4 +1,4 @@
-# umd-front
+# Umd-front
 
 ## Project setup
 ```
