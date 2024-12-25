@@ -1,7 +1,12 @@
 <template></template>
 
 <script>
-export default {};
+import LayoutView from "./views/LayoutView.vue";
+export default {
+	components: {
+		LayoutView,
+	},
+};
 </script>
 
 <style lang="scss" src="./assets/scss/main.scss"></style>
