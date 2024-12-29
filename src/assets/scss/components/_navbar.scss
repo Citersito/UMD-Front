@@ -4,19 +4,19 @@
 nav.navbar{
   display: flex;
   justify-content: space-evenly;
-  padding: 1rem;
-  border-top: 1px solid #000;
+  border-top: 1px solid $lines-color;
   position: fixed;
   bottom: 0;
   width: 100%;
   color: $secondary-color;
   font-family: $font-primary;
-
+  padding: 1rem;
   .navbar-item{
     margin: 0;
 
   }
   @include respond-to(medium){
+    padding: 0;
     .item-1 {
       order: 2;
     }
@@ -26,6 +26,20 @@ nav.navbar{
     .item-3{
       order: 3;
     }
+    .navbar-top{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid $lines-color;
+      #navbar-logo {
+        align-items: center;
+        width: 6.6rem;
+        height: 6.6rem;
+        border: 1px solid $lines-color;
+        border-radius: 50%;
+      }
+    }
+
     h1{
         margin: 0;
         font-size: 5.8rem;
@@ -39,19 +53,29 @@ nav.navbar{
     top: 0;
     justify-content: start;
     gap: 2rem;
-    width: 30%;
+    width: 24%;
+    border: 1px solid $lines-color;
     .navbar-item{
       gap: 1rem;
-
+    }
+    .navbar-item:hover{
+      background-color: red;
     }
   }
-  @include respond-to(large){
-    h1{
+  @include respond-to(large) {
+    width: 20%;
+    h1 {
       font-size: 6.4rem;
     }
-    p{
+    p {
       font-size: 2.6rem;
     }
-  }
+    .navbar-top{
+      #navbar-logo {
+        width: 7rem;
+        height: 7rem;
+      }
 
+    }
+  }
 }

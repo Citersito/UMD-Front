@@ -1,6 +1,12 @@
 <template>
   <nav class="navbar">
-    <h1 v-if="isDesktop">UMD</h1>
+    <div v-if="isDesktop" class="navbar-top">
+      <div id="navbar-logo">
+      </div>
+      <h1>
+        UMD
+      </h1>
+    </div>
     <NavbarItem
         v-for="(item, index) in menuItems"
         :key="index"
