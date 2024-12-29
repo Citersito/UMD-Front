@@ -1,0 +1,57 @@
+@import "../variables";
+@import "../mixins";
+
+nav.navbar{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+  border-top: 1px solid #000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: $secondary-color;
+  font-family: $font-primary;
+
+  .navbar-item{
+    margin: 0;
+
+  }
+  @include respond-to(medium){
+    .item-1 {
+      order: 2;
+    }
+    .item-2 {
+      order: 1;
+    }
+    .item-3{
+      order: 3;
+    }
+    h1{
+        margin: 0;
+        font-size: 5.8rem;
+        line-height: 140%;
+    }
+    p{
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
+    flex-direction: column;
+    top: 0;
+    justify-content: start;
+    gap: 2rem;
+    width: 30%;
+    .navbar-item{
+      gap: 1rem;
+
+    }
+  }
+  @include respond-to(large){
+    h1{
+      font-size: 6.4rem;
+    }
+    p{
+      font-size: 2.6rem;
+    }
+  }
+
+}
