@@ -15,7 +15,8 @@ html {
 }
 
 body {
-	font-family: $font-family-primary;
+    font-family: $font-primary;
+    width: 100vw;
 	height: 100%;
 	margin: 0;
 	user-select: none;
@@ -43,4 +44,12 @@ body {
 			font-size: 1.4rem;
 		}
 	}
+    ion-icon {
+      font-size: 4.8rem;
+      color: $secondary-color;
+      --ionicon-stroke-width: 4.2rem;
+      @include respond-to(medium){
+        font-size: 6rem;
+      }
+  }
 }
