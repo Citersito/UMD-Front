@@ -1,4 +1,7 @@
-<template></template>
+<template>
+	<LayoutView />
+
+</template>
 
 <script>
 import LayoutView from "./views/LayoutView.vue";
