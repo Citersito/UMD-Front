@@ -1,4 +1,11 @@
 <template>
-	<h1>hola</h1>
+	<NavbarView />
 </template>
-<script></script>
+<script>
+import NavbarView from "./NavbarView.vue";
+export default {
+	components: {
+		NavbarView,
+	},
+};
+</script>
