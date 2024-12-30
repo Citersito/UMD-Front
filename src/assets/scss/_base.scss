@@ -48,8 +48,12 @@ body {
       font-size: 4.8rem;
       color: $secondary-color;
       --ionicon-stroke-width: 4.2rem;
-      @include respond-to(medium){
+      @include respond-to(medium) {
         font-size: 6rem;
       }
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
   }
 }
