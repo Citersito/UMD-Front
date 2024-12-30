@@ -27,7 +27,6 @@ export default {
     }
   },
   setup() {
-    // Use vueuse to handle media query
     const showText = useMediaQuery('(min-width: 768px)');
 
     return {
@@ -37,13 +36,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.navbar-item {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-item ion-icon {
-  margin-right: 8px;
-}
-</style>
