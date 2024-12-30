@@ -1,14 +1,18 @@
 <template>
-  <div class="navbar-item">
-    <ion-icon v-if="icon" :name="icon"></ion-icon>
-    <p v-if="showText">{{ text }}</p>
-  </div>
+  <router-link :to="link">
+    <div class="navbar-item">
+      <ion-icon v-if="icon" :name="icon"></ion-icon>
+      <p v-if="showText">{{ text }}</p>
+    </div>
+  </router-link>
 </template>
 
 <script>
-import {ref, onMounted, onUnmounted} from 'vue';
+import {ref} from 'vue';
+import {useMediaQuery} from '@vueuse/core';
 
 export default {
+  name: 'NavbarItem',
   props: {
     icon: {
       type: String,
@@ -18,22 +22,14 @@ export default {
       type: String,
       required: true,
     },
+    link: {
+      type: String,
+      required: true,
+    }
   },
   setup() {
-    const showText = ref(true);
-
-    const updateScreenSize = () => {
-      showText.value = window.matchMedia("(min-width: 768px)").matches;
-    };
-
-    onMounted(() => {
-      updateScreenSize();
-      window.addEventListener('resize', updateScreenSize);
-    });
-
-    onUnmounted(() => {
-      window.removeEventListener('resize', updateScreenSize);
-    });
+    // Use vueuse to handle media query
+    const showText = useMediaQuery('(min-width: 768px)');
 
     return {
       showText,
