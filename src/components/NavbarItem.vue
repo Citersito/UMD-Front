@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import {ref} from 'vue';
 import {useMediaQuery} from '@vueuse/core';
 
 export default {
