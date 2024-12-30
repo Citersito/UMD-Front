@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import {ref, onMounted, onUnmounted} from 'vue';
+import {useMediaQuery} from '@vueuse/core';
 import NavbarItem from "@/components/NavbarItem.vue";
 
 export default {
@@ -26,20 +26,7 @@ export default {
     NavbarItem,
   },
   setup() {
-    const isDesktop = ref(true);
-
-    const updateScreenSize = () => {
-      isDesktop.value = window.matchMedia("(min-width: 1024px)").matches;
-    };
-
-    onMounted(() => {
-      updateScreenSize();
-      window.addEventListener('resize', updateScreenSize);
-    });
-
-    onUnmounted(() => {
-      window.removeEventListener('resize', updateScreenSize);
-    });
+    const isDesktop = useMediaQuery('(min-width: 1024px)');
 
     return {
       isDesktop,
