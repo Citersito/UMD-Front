@@ -1,0 +1,11 @@
+.layout {
+  display: flex;
+  min-height: 100rem;
+  width: 100vw;
+  flex-direction: row;
+}
+
+.content{
+  max-width: 95%;
+  margin: auto;
+}
